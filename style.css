@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+
+}
+nav ul li {
+    padding: 0 10px;
+}
+.brand img {
+    width: 40px;
+    padding: 0 8px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+
+}
+.container {
+    min-height: 70vh;
+    /* background-color: black; */
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    flex-direction: column;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background: url('pexels-photo-3122192.webp') no-repeat;
+    background-size:cover;
+    position: relative;
+}
+/* .songLogo {
+    animation: none;
+    animation-name: loop;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+} */
+@keyframes loop {
+    from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(360deg);
+      }    
+}
+#songBanner {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    right: 17%;
+}
+#songBannerImg {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    border: 1px solid red;
+}
+.bottom {
+    position: sticky;
+    height: 75px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.icons {
+    margin-top: 14px;
+    cursor: pointer;
+}
+.icons i {
+    font-size: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+.songItemContainer  {
+    margin-top: 74px;
+}
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 50%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 43px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.songItem span {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.songItem i {
+    /* justify-items:end; */
+    /* float: right; */
+    font-size: 25px;
+    cursor: pointer;
+}
+.lastStyle {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.songTime {
+    position: absolute;
+    right: 10vw;
+    top: 30px;
+    font-family: 'Rubik 80s Fade', cursive;
+}
+
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Josefin Sans', sans-serif;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Josefin Sans', sans-serif;
+    max-width:250px;
+    height: 50px;
+}
+.songInfo img{
+    padding: 5px;
+    width: 30%; 
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+.songItemPlay {
+    cursor: pointer;
+}

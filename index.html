@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify - Your Favourite Music is Here</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/370f65e5a7.js" crossorigin="anonymous"></script>
+</head>
+<body class="body hii">
+    <nav>
+        <ul>
+            <li class="brand"><img src="spotify logo.png"alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>My Favourite Songs To Play</h1>
+        <div class="songItemContainer">
+            <div class="songItem">
+                <img class="firstLogo songLogo" src="Covers/1.jpg" alt="1" >
+                <span class="songName">Chandaliyo Ugyo Re</span>
+                <span class="lastStyle"><span class="timestamp">02:21</span><i id="0" class="fa-solid songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img class="songLogo" src="Covers/1.jpg" alt="2" >
+                <span class="songName">Chandaliyo Ugyo Re</span>
+                <span class="lastStyle"><span class="timestamp">02:21</span><i id="1" class="fa-solid first songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img class="songLogo" src="Covers/1.jpg" alt="3" >
+                <span class="songName">Chandaliyo Ugyo Re</span>
+                <span class="lastStyle"><span class="timestamp">02:21</span><i id="2" class="fa-solid songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img class="songLogo" src="Covers/1.jpg" alt="4" >
+                <span class="songName">Chandaliyo Ugyo Re</span>
+                <span class="lastStyle"><span class="timestamp">02:21</span><i id="3" class="fa-solid songItemPlay fa-circle-play"></i></span>
+            </div>
+            <div class="songItem">
+                <img class="songLogo" src="Covers/1.jpg" alt="5" >
+                <span class="songName">Chandaliyo Ugyo Re</span>
+                <span class="lastStyle"><span class="timestamp">02:21</span><i id="4" class="fa-solid songItemPlay fa-circle-play"></i></span>
+            </div>
+            
+        </div>
+        <div id="songBanner">
+            <img src="Covers/1.jpg" alt="" id="songBannerImg">
+        </div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- font awesome icons  -->
+            <i class="fa-solid fa-backward-step" id="previous"></i>
+            <i class="fa-solid fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-forward-step" id="next"></i> 
+            
+        </div>
+        <div class="songInfo">
+            <!-- <img src="music Gif.gif" alt="" id="gif">  -->
+            <span id="masterSongName">Chandaliyo Ugyo Re</span>
+        </div>
+        <div class="songTime">
+            <span id="CMinute">00</span>:<span id="CSecond">00</span>
+            <span>/</span>
+            <span id="DMinute">00</span>:<span id="DSecond">00</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
