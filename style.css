@@ -39,7 +39,7 @@ nav ul li {
 
 }
 .container {
-    min-height: 70vh;
+    min-height: 65vh;
     /* background-color: black; */
     color: white;
     font-family: 'Bebas Neue', cursive;
@@ -60,6 +60,41 @@ nav ul li {
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
 } */
+.songItemContainer  {
+    margin-top: 74px;
+}
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 50%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 43px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.songItem span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.songItem i {
+    /* justify-items:end; */
+    /* float: right; */
+    /* font-size: 25px; */
+    cursor: pointer;
+}
+
 @keyframes loop {
     from {
         transform: rotate(0deg);
@@ -108,40 +143,6 @@ nav ul li {
     width: 80vw;
     cursor: pointer;
 }
-.songItemContainer  {
-    margin-top: 74px;
-}
-.songItem {
-    height: 50px;
-    display: flex;
-    background-color: white;
-    width: 50%;
-    color: black;
-    margin: 12px 0;
-    justify-content: space-between;
-    /* justify-content: center; */
-    align-items: center;
-    padding: 0 10px;
-    border-radius: 43px;
-}
-
-.songItem img{
-    width: 43px;
-    margin: 0 23px;
-    border-radius: 34px;
-}
-
-.songItem span {
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.songItem i {
-    /* justify-items:end; */
-    /* float: right; */
-    font-size: 25px;
-    cursor: pointer;
-}
 .lastStyle {
     width: 90px;
     display: flex;
@@ -165,15 +166,15 @@ nav ul li {
     align-items: center;
     justify-content: space-around;
     font-family: 'Josefin Sans', sans-serif;
-    max-width:250px;
+    max-width: 250px;
     height: 50px;
 }
-.songInfo img{
+/* .songInfo img{
     padding: 5px;
     width: 30%; 
     opacity: 0;
     transition: opacity 0.8s ease-in;
-}
+} */
 .songItemPlay {
     cursor: pointer;
 }

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 23px auto;
+    padding: 0;
+}
+.songItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+}
+.songItem {
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songItem span {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+@keyframes loop {
+    from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(360deg);
+      }    
+}
+#songBanner {
+    position: static;
+}
+.bottom {
+    
+    width: 100%;
+    font-size: 0.8rem;
+}
+.icons i {
+    font-size: 1rem;
+}
+.songInfo {
+    width: 20%;
+    text-align: center;
+    font-size: 0.9rem;
+}
