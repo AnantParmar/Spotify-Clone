@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap'); 
 body {
     background-color: antiquewhite;
 }
@@ -153,7 +154,8 @@ nav ul li {
     position: absolute;
     right: 10vw;
     top: 30px;
-    font-family: 'Rubik 80s Fade', cursive;
+    font-family: 'Old Standard TT', serif;
+    font-weight: bold;
 }
 
 
