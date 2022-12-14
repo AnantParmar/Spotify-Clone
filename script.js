@@ -5,7 +5,6 @@ let songIndex = 0
 let audioElement = new Audio('Songs/1.mp3')
 let masterPlay = document.getElementById("masterPlay")
 let myProgressBar = document.getElementById("myProgressBar")
-// let gif = document.getElementById("gif")
 let CMinute = document.getElementById("CMinute")
 let CSecond = document.getElementById("CSecond")
 let DMinute = document.getElementById("DMinute")
@@ -23,13 +22,11 @@ let songs = [
 ]
 
 songItems.forEach((Element,i) => {
-    // console.log(Element,i)+
     Element.getElementsByTagName('img')[0].src = songs[i].coverPath
     Element.getElementsByClassName('songName')[0].innerText = songs[i].songName
     Element.getElementsByClassName('timestamp')[0].innerText = songs[i].audioLen 
 })
-// audioElement.play()
-// Handle Banner Img 
+
 
 
 // Handle play/pause click 
@@ -54,21 +51,14 @@ masterPlay.addEventListener('click', ()=>{
                 element.parentNode.parentNode.firstElementChild.style.animation = "loop 1.5s infinite linear"
             }
         })
-        // Array.from(document.getElementsByClassName('songItem')).forEach((element)=> {
-            // console.log(element.firstChild.nextSibling)
-            // if(element.children.src == `Covers/${songIndex+1}.jpg`){
-            //     console.log(element.children)
-            //     console.log("jznksb")
-            // }
-        // })
+        
     }
     else
     {
         audioElement.pause()
         masterPlay.classList.remove('fa-circle-pause')
         masterPlay.classList.add('fa-circle-play')
-        // gif.style.opacity = "0"
-        songBannerImg.style.opacity = "0"
+        // songBannerImg.style.opacity = "0"
         makeAllPlays()
         makeLoopPause()
     }
@@ -171,7 +161,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=> 
         {
             audioElement.pause()
             
-            songBannerImg.style.opacity = "0"
+            // songBannerImg.style.opacity = "0"
             // gif.style.opacity = "0"
             targetSibling.style.animation = "none"
 

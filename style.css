@@ -115,7 +115,7 @@ nav ul li {
 #songBannerImg {
     width: 200px;
     height: 200px;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.4s;
     border: 1px solid red;
 }
