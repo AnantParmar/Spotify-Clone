@@ -7,7 +7,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+nav {
+    height: 10vh;
+}
 * {
     margin: 0;
     padding: 0;
@@ -16,17 +18,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    margin: 23px auto;
+    margin: 10px auto;
+    height: 77vh;
     padding: 0;
 }
+
 .songItemContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 95vw;
+    margin-top: 0;
+    height: 50vh;
+    overflow: scroll;
 }
 .songItem {
     width: 90%;
@@ -51,17 +58,26 @@ body {
 }
 #songBanner {
     position: static;
+    height: 100px; 
+    width: 100px;
+}
+#songBannerImg {
+    height: 100px;
+    width: 100px;
+
 }
 .bottom {
-    
+    height: 10vh;
     width: 100%;
     font-size: 0.8rem;
+    background-color: brown;
 }
 .icons i {
     font-size: 1rem;
 }
 .songInfo {
     width: 20%;
+    height: 50%;
     text-align: center;
     font-size: 0.9rem;
 }

@@ -32,20 +32,22 @@ songItems.forEach((Element,i) => {
 // Handle play/pause click 
 
 masterPlay.addEventListener('click', ()=>{
-    console.log("MasterPlay")
+    // console.log("MasterPlay")
+    let a = songIndex
+    // console.log(a)
     if(audioElement.paused || audioElement.currentTime<=0)
     {
         audioElement.play()
-        let a = audioElement.src.slice(-5,-4)
-        console.log(a)
+        // let a = audioElement.src.slice(-5,-4)
+        // console.log(a)
         masterPlay.classList.remove('fa-circle-play')
         masterPlay.classList.add('fa-circle-pause')
         // gif.style.opacity = "1"
         songBannerImg.style.opacity = "1"
         Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=> {
-            if(element.id==(a-1))
+            if(element.id==(a))
             {
-                console.log("a")
+                // console.log("a")
                 element.classList.remove("fa-circle-play")
                 element.classList.add("fa-circle-pause")
                 element.parentNode.parentNode.firstElementChild.style.animation = "loop 1.5s infinite linear"
@@ -66,20 +68,29 @@ masterPlay.addEventListener('click', ()=>{
 // Listen to Events
 audioElement.addEventListener('timeupdate', ()=> {
     // Update Seek bar
-    progress = parseInt((audioElement.currentTime/audioElement.duration)*100)
+    // console.log
+    // console.log(myProgressBar.value)
+    if(isNaN(audioElement.duration)) {
+        progress = 0;
+        
+        // console.log(audioElement.duration)
+        DMinute.innerText ="00";  
+        DSecond.innerText = "00"; 
+    } else {
+
+        progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
+        DMinute.innerText = parseInt(audioElement.duration/60);
+        DSecond.innerText = parseInt(audioElement.duration%60);
+    }
+    
     myProgressBar.value = progress
-
-    // console.log(audioElement.duration)
-    DMinute.innerText = parseInt(isNaN(audioElement.duration) ? "00" : audioElement.duration/60)
-    DSecond.innerText = parseInt(isNaN(audioElement.duration) ? "00" : audioElement.duration%60)
-
     CMinute.innerText = parseInt(audioElement.currentTime/60)
     CSecond.innerText = parseInt(audioElement.currentTime%60)
     if(audioElement.currentTime === audioElement.duration)
     {
-        console.log("equal to")
+        // console.log("equal to")
         audioElement.pause()
-        console.log(songIndex)
+        // console.log(songIndex)
 
         if(songIndex<4)
         songIndex = songIndex+1
@@ -90,19 +101,19 @@ audioElement.addEventListener('timeupdate', ()=> {
         makeLoopPause()
         audioElement.src = `Songs/${songIndex+1}.mp3`
         let x = songIndex
-        console.log(x)
+        // console.log(x)
         songBannerImg.src = songs[songIndex].coverPath
         songBannerImg.style.opacity = "1"
         masterSongName.innerText = songs[songIndex].songName
         Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=> {
             if(element.id==(x))
             {
-                console.log("a")
+                // console.log("a")
                 element.classList.remove("fa-circle-play")
                 element.classList.add("fa-circle-pause")
                 element.parentNode.parentNode.firstElementChild.style.animation = "loop 1.5s infinite linear"
             }
-            console.log(element.firstChild)
+            // console.log(element.firstChild)
         })
         audioElement.play()
 
@@ -150,7 +161,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=> 
             masterPlay.classList.remove('fa-circle-play')
             masterPlay.classList.add('fa-circle-pause')
             // gif.style.opacity = "1"
-            console.log("It's Work")
+            // console.log("It's Work")
             // console.log(e.target.previousElementSibling+"helloooo")
             
             // e.target.firstChild.style.animation = "loop 1.5s infinite linear"
@@ -174,6 +185,8 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=> 
 })
 
 document.getElementById('next').addEventListener('click', ()=>{
+    myProgressBar.value = 0;
+
     if(songIndex>=4)
     {
         songIndex = 0
@@ -183,9 +196,11 @@ document.getElementById('next').addEventListener('click', ()=>{
     }
     makeAllPlays()
     makeLoopPause()
-    console.log(songIndex)
+    myProgressBar.value = 0;
+    // console.log(songIndex)
     audioElement.src = `Songs/${songIndex+1}.mp3`
     audioElement.currentTime = 0
+    audioElement.play()
     masterSongName.innerText = songs[songIndex].songName
     songBannerImg.src = songs[songIndex].coverPath
     songBannerImg.style.opacity = "1"
@@ -193,7 +208,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=> {
         if(element.id==(a-1))
         {
-            console.log("a")
+            // console.log("a")
             element.classList.remove("fa-circle-play")
             element.classList.add("fa-circle-pause")
             element.parentNode.parentNode.firstElementChild.style.animation = "loop 1.5s infinite linear"
@@ -205,7 +220,6 @@ document.getElementById('next').addEventListener('click', ()=>{
         masterPlay.classList.add('fa-circle-pause')
     }
     // gif.style.opacity = "1"
-    audioElement.play()
 })
 document.getElementById('previous').addEventListener('click', ()=>{
     if(songIndex<=0)
@@ -217,7 +231,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     }
     makeAllPlays()
     makeLoopPause()
-    console.log(songIndex)
+    // console.log(songIndex)
     audioElement.src = `Songs/${songIndex+1}.mp3`
     audioElement.currentTime = 0
     masterSongName.innerText = songs[songIndex].songName
@@ -227,7 +241,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=> {
         if(element.id==(a-1))
         {
-            console.log("a")
+            // console.log("a")
             element.classList.remove("fa-circle-play")
             element.classList.add("fa-circle-pause")
             element.parentNode.parentNode.firstElementChild.style.animation = "loop 1.5s infinite linear"
